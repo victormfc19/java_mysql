@@ -11,7 +11,6 @@ import datos.ClienteJDBC;
 import datos.SedeJDBC;
 import model.Asesor;
 import model.Cliente;
-import model.Cuenta;
 import model.Sede;
 
 public class Principal {

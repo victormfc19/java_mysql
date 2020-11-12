@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Cliente;
-import model.Cuenta;
 
 public class ClienteJDBC {
 	private static final String sql_select = "select * from tbl_cliente";
