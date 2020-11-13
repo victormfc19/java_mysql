@@ -70,5 +70,44 @@ public class SedeJDBC {
 			return sedes;
 		}
 	
+	public void update(String id_nuevo,String nombre_nuevo, String id) {
+		Connection cnx = null;
+		PreparedStatement ps = null;
+		try {
+			cnx = Conexion.getConexion();
+			
+			ps = cnx.prepareStatement(sql_update);
+			ps.setString(1, id_nuevo);
+			ps.setString(2, nombre_nuevo);
+			ps.setString(2, id);
+			int respuesta = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace(System.out);
+		}finally {
+			Conexion.close(cnx);
+			Conexion.close(ps);
+		}
+	}
+	
+	public void delete(String id) {
+		Connection cnx = null;
+		PreparedStatement ps = null;
+		try {
+			cnx = Conexion.getConexion();
+			
+			ps = cnx.prepareStatement(sql_delete);
+			ps.setString(1, id);
+
+			int respuesta = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace(System.out);
+		}finally {
+			Conexion.close(cnx);
+			Conexion.close(ps);
+		}
+	}
+	
 	
 }
