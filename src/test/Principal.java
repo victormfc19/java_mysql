@@ -1,6 +1,7 @@
 package test;
 
 import java.util.ArrayList;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -12,6 +13,16 @@ import datos.SedeJDBC;
 import model.Asesor;
 import model.Cliente;
 import model.Sede;
+
+
+/**
+ * 
+ * @author Victor Manuel Florez Castro - victor_florez82171@elpoli.edu.co
+ * Fecha: 13/11/2020
+ * Semillero Java - Konecta 2020
+ */
+
+
 
 public class Principal {
 	
